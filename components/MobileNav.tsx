@@ -67,15 +67,15 @@ const MobileNav = () => {
   const links = [
     {
       name: "home",
-      href: "/",
+      path: "/",
     },
     {
       name: "work",
-      href: "/work",
+      path: "/work",
     },
     {
       name: "contact",
-      href: "/contact",
+      path: "/contact",
     },
   ];
 
@@ -86,12 +86,12 @@ const MobileNav = () => {
       </div>
       {toggle && (
         <div
-          className="fixed top-0 left-0 flex z-50 lg:hidden w-full h-screen justify-end"
+          className="fixed top-0 left-0 z-50 flex justify-end w-full h-screen lg:hidden"
           style={{ backgroundColor: "rgba(0,0,0,0.7)" }}
         >
           <div
             ref={navbarRef}
-            className={`w-8/12 h-full bg-slate-700 flex items-end px-7 pt-4 flex-col`}
+            className={`w-8/12 h-full bg-slate-800 flex items-end px-7 pt-4 flex-col`}
           >
             <div ref={closeButtonBorderShowUp} className="h-10">
               <IoMdClose
@@ -100,13 +100,17 @@ const MobileNav = () => {
                 onClick={toggleButton}
               />
             </div>
-            <ul className="w-full my-5">
+            <h2 className="w-full mt-10 mb-16 text-2xl font-bold text-center">
+              Sandi<span className="text-green-500">AP</span>
+            </h2>
+            <ul className="flex flex-col w-full gap-y-5">
               {links.map((link, index) => (
                 <li
                   key={index}
-                  className="w-full text-center mb-3 bg-slate-500 py-2 rounded-md hover:bg-slate-600 transition duration-200 shadow shadow-white cursor-pointer"
+                  // className="w-full py-2 mb-3 text-center transition duration-200 rounded-md shadow cursor-pointer bg-slate-500 hover:bg-slate-600 shadow-white"
+                  className="text-xl text-center"
                 >
-                  <a href={link.href}>{link.name}</a>
+                  <a href={link.path}>{link.name}</a>
                 </li>
               ))}
             </ul>
