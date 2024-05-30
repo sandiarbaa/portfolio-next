@@ -70,6 +70,10 @@ const MobileNav = () => {
       path: "/",
     },
     {
+      name: "resume",
+      path: "/resume",
+    },
+    {
       name: "work",
       path: "/work",
     },
@@ -81,7 +85,7 @@ const MobileNav = () => {
 
   return (
     <div>
-      <div onClick={toggleButton}>
+      <div onClick={toggleButton} className="cursor-pointer">
         <CiMenuFries size={28} />
       </div>
       {toggle && (
@@ -91,9 +95,10 @@ const MobileNav = () => {
         >
           <div
             ref={navbarRef}
-            className={`w-8/12 h-full bg-slate-800 flex items-end px-7 pt-4 flex-col`}
+            // className={`w-9/12 h-full bg-slate-800 flex items-end px-7 pt-4 flex-col`}
+            className="w-9/12 h-full bg-slate-800 flex items-end px-7 pt-4 flex-col relative before:absolute before:top-0 before:left-[-10px] before:w-10 before:h-full before:bg-slate-800 before:blur-sm before:z-[-1]"
           >
-            <div ref={closeButtonBorderShowUp} className="h-10">
+            <div ref={closeButtonBorderShowUp} className="h-10 cursor-pointer">
               <IoMdClose
                 size={38}
                 className="text-green-500"
@@ -101,17 +106,18 @@ const MobileNav = () => {
               />
             </div>
             <h2 className="w-full mt-10 mb-16 text-2xl font-bold text-center">
-              Sandi<span className="text-green-500">AP</span>
+              Sandi<span className="text-green-500 ml-1.5">AP</span>
             </h2>
             <ul className="flex flex-col w-full gap-y-5">
               {links.map((link, index) => (
-                <li
-                  key={index}
-                  // className="w-full py-2 mb-3 text-center transition duration-200 rounded-md shadow cursor-pointer bg-slate-500 hover:bg-slate-600 shadow-white"
-                  className="text-xl text-center"
-                >
-                  <a href={link.path}>{link.name}</a>
-                </li>
+                <a key={index} href={link.path}>
+                  <li
+                    // className="w-full py-2 mb-3 text-center transition duration-200 rounded-md shadow cursor-pointer bg-slate-500 hover:bg-slate-600 shadow-white"
+                    className="py-1 text-xl text-center transition duration-300 rounded-md hover:text-green-400 hover:shadow hover:shadow-white bg-slate-500 hover:bg-slate-600"
+                  >
+                    {link.name}
+                  </li>
+                </a>
               ))}
             </ul>
           </div>

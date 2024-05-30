@@ -5,7 +5,7 @@ const socials = [
   {
     icons: (
       <FaGithub
-        size={20}
+        size={25}
         className="text-green-500 transition duration-300 hover:text-white"
       />
     ),
@@ -14,7 +14,7 @@ const socials = [
   {
     icons: (
       <FaInstagram
-        size={20}
+        size={25}
         className="text-green-500 transition duration-300 hover:text-white"
       />
     ),
@@ -23,7 +23,7 @@ const socials = [
   {
     icons: (
       <FaLinkedin
-        size={20}
+        size={25}
         className="text-green-500 transition duration-300 hover:text-white"
       />
     ),
@@ -33,7 +33,7 @@ const socials = [
 
 const Social = () => {
   return (
-    <div className="flex justify-center w-full mt-4 gap-x-5 lg:justify-start">
+    <div className="flex justify-center w-full my-8 gap-x-5 lg:justify-start">
       {socials.map((item, index) => (
         <Link key={index} href={item.path}>
           <span className="">{item.icons}</span>

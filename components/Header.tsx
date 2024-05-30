@@ -4,10 +4,10 @@ import MobileNav from "./MobileNav";
 
 const Header = () => {
   return (
-    <nav className="w-full py-5 text-white px-8 lg:px-20 flex justify-between items-center">
+    <nav className="flex items-center justify-between w-full px-8 py-5 text-white lg:px-20">
       <Link href="/">
         <h1 className="text-2xl font-bold capitalize">
-          Sandi<span className="text-green-500">AP</span>
+          Sandi<span className="ml-1.5 text-green-500 ">AP</span>
         </h1>
       </Link>
 

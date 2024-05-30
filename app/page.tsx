@@ -18,30 +18,38 @@ export default function Home() {
     <section className="min-h-screen">
       <div className="container h-full px-8 mx-auto lg:px-20">
         <div className="flex flex-col items-center lg:flex-row lg:justify-between lg:pt-8">
-          <div className="order-2 w-full h-full lg:max-w-lg lg:order-none">
+          <div className="flex flex-col items-center order-2 w-full h-full lg:max-w-lg lg:order-none">
             {/* text */}
-            <div className="text-center lg:text-left">
+            <div className="mb-8 text-center lg:text-left">
               <span className="text-xl">
                 <span className="text-green-500">Front-end Developer</span>{" "}
               </span>
               <h1 className="my-3 h1">
-                <span className="mr-2">Hello,</span>I{"'"}am{" "}
+                <span className="mr-2">Hello,</span>I{"'"}am <br />
                 <span className="text-green-500">Sandi Arba</span>
               </h1>
               <p className="text-sm">
                 I can build awesome & modern UI for Websites. And I am very
-                interested in designing application UI
+                interested in designing application UI.
               </p>
             </div>
             {/* Read More Button */}
-            {/* <Link
-              href={"/work"}
-              className="px-4 py-2 font-bold text-center bg-green-500 rounded-lg shadow text-slate-800 shadow-white"
+            <Link
+              href={"/resume"}
+              className="w-32 px-4 py-2 font-bold text-center transition duration-300 bg-green-500 rounded-lg shadow hover:text-white hover:bg-green-700 text-slate-800 shadow-white lg:hidden"
             >
               <span>Read More</span>
-            </Link> */}
+            </Link>
             {/* social */}
-            <Social />
+            <div className="w-full lg:-mt-5 lg:flex lg:justify-between lg:items-center">
+              <Link
+                href={"/resume"}
+                className="hidden w-40 h-10 px-4 py-2 mr-5 font-bold text-center transition duration-300 bg-green-500 rounded-lg shadow hover:text-white hover:bg-green-700 text-slate-800 shadow-white lg:block"
+              >
+                <span>Read More</span>
+              </Link>
+              <Social />
+            </div>
           </div>
 
           {/* Photo */}

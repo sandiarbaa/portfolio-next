@@ -11,6 +11,10 @@ const Nav = () => {
       href: "/",
     },
     {
+      name: "resume",
+      href: "/resume",
+    },
+    {
       name: "work",
       href: "/work",
     },
@@ -23,7 +27,7 @@ const Nav = () => {
           key={index}
           className={
             pathname === link.href
-              ? "text-green-500 border-b-2 border-green-500 pb-1"
+              ? "text-green-500 border-b-2 border-green-500"
               : "hover:text-green-500 transition-all"
           }
         >
