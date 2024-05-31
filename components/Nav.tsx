@@ -34,12 +34,6 @@ const Nav = () => {
           <li className="capitalize">{link.name}</li>
         </Link>
       ))}
-      <Link
-        href="/contact"
-        className=" bg-green-500 px-3 py-1 rounded hover:bg-green-700 transition-all duration-300 shadow shadow-white"
-      >
-        Contact
-      </Link>
     </ul>
   );
 };

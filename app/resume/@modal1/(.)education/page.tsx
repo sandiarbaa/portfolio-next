@@ -24,7 +24,7 @@ const EducationComponent = () => {
     },
   ];
   return (
-    <section className="w-full max-w-3xl px-8 pb-10 text-center lg:pb-0 -mt-10">
+    <section className="w-full max-w-3xl px-8 pb-10 text-center lg:pb-0 mt-0 lg:mt-[-50px]">
       {/* Text Content */}
       <div>
         <h1 className="mt-10 text-3xl font-bold lg:mt-0">My Education</h1>

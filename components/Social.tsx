@@ -35,7 +35,7 @@ const Social = () => {
   return (
     <div className="flex justify-center w-full my-8 gap-x-5 lg:justify-start">
       {socials.map((item, index) => (
-        <Link key={index} href={item.path}>
+        <Link key={index} href={item.path} target="_blank">
           <span className="">{item.icons}</span>
         </Link>
       ))}
