@@ -4,9 +4,6 @@
 
 @layer base {
   body {
-    @apply bg-slate-900 text-white;
-  }
-  .h1 {
-    @apply text-4xl lg:text-4xl leading-[1.1] font-semibold;
+    @apply font-primary bg-primary text-white leading-loose;
   }
 }

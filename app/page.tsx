@@ -22,9 +22,11 @@ export default function Home() {
             {/* text */}
             <div className="mb-8 text-center lg:text-left">
               <span className="text-xl">
-                <span className="text-green-500">Front-end Developer</span>{" "}
+                <span className="text-green-500 text-xl font-bold">
+                  Front-end Developer
+                </span>{" "}
               </span>
-              <h1 className="my-3 h1">
+              <h1 className="my-3 text-3xl font-bold">
                 <span className="mr-2">Hello,</span>I{"'"}am <br />
                 <span className="text-green-500">Sandi Arba</span>
               </h1>
